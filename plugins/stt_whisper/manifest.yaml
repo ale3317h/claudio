@@ -1,0 +1,8 @@
+name: "stt_whisper"
+version: "1.0.0"
+description: "Voz a texto local con faster-whisper (CPU)"
+author: "CLAUDIO"
+category: "audio"
+dependencies: []
+permissions: ["AUDIO"]
+entry_point: "plugin"

@@ -1,0 +1,63 @@
+# Core
+langgraph>=0.2.0
+langchain-core>=0.3.0
+langchain-ollama>=0.1.0
+langchain-groq>=0.2.0
+langchain-google-genai>=2.0.0
+langchain-openai>=0.2.0
+vosk>=0.3.45
+psutil>=6.0.0
+langchain-text-splitters>=0.3.0
+
+# Config
+pydantic>=2.7.0
+pydantic-settings>=2.3.0
+pyyaml>=6.0
+
+# Vector DB
+chromadb>=0.5.0
+
+# Logging
+loguru>=0.7.0
+structlog>=24.0.0
+
+# File watching
+watchdog>=4.0.0
+
+# CLI
+typer>=0.12.0
+rich>=13.0.0
+
+# Testing
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+pytest-cov>=5.0.0
+
+# Linting
+ruff>=0.5.0
+mypy>=1.10.0
+
+# Voice (Phase 2) — activas abajo: faster-whisper, edge-tts, sounddevice, soundfile.
+# piper-tts/openwakeword descartados (Edge-TTS + Vosk ganaron).
+
+# PC Automation (Phase 2) — ctypes nativo, sin pywinauto/uiautomation.
+
+# Web (Tavily + YouTube): trafilatura/duckduckgo descartados (Tavily cubre).
+httpx>=0.27.0
+websockets>=14.0
+yt-dlp>=2024.1.0
+ytmusicapi>=1.0.0
+google-api-python-client>=2.0.0  # sync permanente via YouTube Data API (OAuth)
+
+# Voice (Phase 2)
+faster-whisper>=1.0.0
+edge-tts>=7.0.0
+sounddevice>=0.4.0
+soundfile>=0.12.0
+
+# Classroom (proxima fase: OAuth + entrega de tareas)
+# google-auth-oauthlib>=1.0.0
+
+# GUI tray (Fase 6)
+pystray>=0.19.0
+pillow>=10.0.0

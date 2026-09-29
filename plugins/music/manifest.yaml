@@ -1,0 +1,8 @@
+name: "music"
+version: "1.0.0"
+description: "Buscar musica en YouTube sin API key"
+author: "CLAUDIO"
+category: "media"
+dependencies: []
+permissions: ["NETWORK"]
+entry_point: "plugin"

@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# JARVIS
+.env
+data/chromadb/
+data/jobs.json
+data/logs/
+data/opera-profile/
+data/ytmusic_headers.json
+data/vosk-model/
+headers.txt
+data/jarvis.db
+data/jarvis.db-*
+data/preferences.json
+data/mymusic_cache.json
+data/tts_cache/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Obsidian (opcional - comenta si quieres versionar config)
+.obsidian/workspace*
+.obsidian/plugins/*
+!.obsidian/plugins/manifest.json
+.obsidian/themes/*
+
+# Modelos locales (muy grandes)
+models/
+*.bin
+*.gguf
+*.onnx
+
+# Runtime/diagnóstico (se regeneran)
+data/last_mic.wav
+data/test_memory*/
+data/voice_samples/
+data/tts_cache/
+data/ytmusic_oauth.json
+data/ytmusic_headers.json
+*.db
+data/preferences.json

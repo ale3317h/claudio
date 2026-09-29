@@ -1,0 +1,8 @@
+name: "ytmusic"
+version: "1.0.0"
+description: "Tu cuenta de YouTube Music: playlists, historial y gustos (requiere OAuth)"
+author: "CLAUDIO"
+category: "media"
+dependencies: []
+permissions: ["NETWORK"]
+entry_point: "plugin"

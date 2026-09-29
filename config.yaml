@@ -1,0 +1,90 @@
+﻿claudio:
+  name: "CLAUDIO"
+  language: "es"
+  wake_words: ["claudio", "hey claudio"]
+  response_language: "es"
+
+core:
+  backend: "groq"   # groq | gemini | ollama (se prueban en orden con fallbacks)
+  fallbacks: ["gemini", "ollama"]  # github fuera: endpoint retirado (410). openrouter fuera por defecto: su modelo gratis filtra thinking en la respuesta y tiene cuota minima (activable manual con OPENROUTER_API_KEY en fallbacks si lo queres)
+  model_main: "llama3.2:3b"           # Ollama: chico y entero en VRAM (era 8b, no entraba)
+  model_fast: "llama3.2:3b"            # Para clasificaciÃ³n rÃ¡pida
+  model_coder: "llama3.1:8b"     # CÃ³digo/scripts
+  groq_model_main: "openai/gpt-oss-120b"  # NO cambiar a llama-3.3-70b-versatile: en plan gratuito da 404
+  groq_model_fast: "openai/gpt-oss-20b"   # Groq gratis rapido (intents + plan)
+  gemini_model_main: "gemini-flash-latest"   # Gemini gratis (con GOOGLE_API_KEY)
+  gemini_model_fast: "gemini-flash-lite-latest"
+  openrouter_model_main: "nvidia/nemotron-3-super-120b-a12b:free"
+  openrouter_model_fast: "liquid/lfm-2.5-2.6b:free"
+  dream_model_main: "auto"
+  dream_model_fast: "auto"
+  github_model_main: "openai/gpt-4o-mini"
+  github_model_fast: "openai/gpt-4o-mini"
+  max_context_tokens: 4096  # menos contexto = menos tokens = mas rapido y menos errores
+  temperature: 0.2  # mas determinista = menos alucinaciones de comandos
+
+memory:
+  vault_path: "."
+  embedding_model: "nomic-embed-text"
+  chunk_size: 512
+  chunk_overlap: 50
+  top_k: 3  # 3 buenos > 5 ruidosos (evita sesgo a "Algun dia")
+  semantic_weight: 0.7
+  episodic_weight: 0.3
+
+voice:
+  stt_backend: "groq"   # groq (rapido, gratis, usa GROQ_API_KEY) | local (privado, CPU)
+  stt_model: "large-v3-turbo"   # modelo local si backend=local (tiny/base/small/medium/large-v3-turbo/large-v3)
+  stt_device: "cpu"
+  stt_compute_type: "int8"
+  tts_engine: "edge"
+  tts_voice: "es-MX-JorgeNeural"   # CLAUDIO latino estilo Iron Man (alternativa AR: es-AR-TomasNeural)
+  tts_rate: "+5%"   # agil pero calmo (rango util: +0% a +10%)
+  tts_pitch: "-8Hz"   # grave leve estilo mayordomo (rango util: -12Hz a -5Hz)
+  sample_rate: 16000
+  vad_threshold: 0.02
+  silence_seconds: 1.2  # ~2s de silencio y ejecuta (antes 3.0, se sentia lerdo)
+  max_record_seconds: 30.0  # 60s de audio = STT lento y caro; 30s alcanza
+  ptt_key: "rctrl"  # CTRL derecho: mantener para hablar, soltar para enviar (sin toggle ni bip)
+  noise_suppress: true  # supresion de ruido del mic estilo Discord (sin instalar nada)
+  noise_gate_db: -38.0
+  wake_enabled: true
+  wake_keyword: "claudio"
+  wake_sensitivity: 0.6
+
+plugins:
+  enabled:
+    - stt_whisper
+    - tts_edge
+    - pc_control
+    - discord
+    - browser
+    - whatsapp
+    - music
+    - ytmusic
+    - memory
+    - system
+    - web_search
+    - calendar
+    - tasks
+    - obsidian
+  auto_load: true
+  permissions:
+    pc_control: ["FILE_READ", "FILE_WRITE", "APP_LAUNCH", "SHELL"]
+    web_search: ["NETWORK"]
+    calendar: ["NETWORK", "FILE_READ"]
+
+security:
+  confirm_destructive: true
+  allowlist_paths: ["~/Documents", "~/Downloads", "~/Desktop"]
+  blocklist_apps: ["regedit", "cmd", "powershell"]
+  audit_log: true
+
+obsidian:
+  daily_note_folder: "daily-notes"
+  templates_folder: "templates"
+  tasks_format: "obsidian-tasks"
+  graph_enabled: true
+
+pc_control:
+  allow_shell: true   # true = permite ejecutar comandos PowerShell via tool run_shell

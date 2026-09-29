@@ -1,0 +1,8 @@
+name: "pc_control"
+version: "1.0.0"
+description: "Automatizacion de Windows: abrir apps, ventanas, tipeo, hotkeys, shell"
+author: "CLAUDIO"
+category: "system"
+dependencies: []
+permissions: ["APP_LAUNCH", "SHELL"]
+entry_point: "plugin"

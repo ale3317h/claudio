@@ -1,0 +1,8 @@
+name: "discord"
+version: "1.0.0"
+description: "Enviar mensajes a canales de Discord via webhook"
+author: "CLAUDIO"
+category: "communication"
+dependencies: ["pc_control"]
+permissions: ["NETWORK"]
+entry_point: "plugin"

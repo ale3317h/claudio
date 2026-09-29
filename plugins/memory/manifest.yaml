@@ -1,0 +1,8 @@
+name: "memory"
+version: "1.0.0"
+description: "Memoria estructurada: datos, eventos y preferencias (SQLite + JSON)"
+author: "CLAUDIO"
+category: "memory"
+dependencies: []
+permissions: []
+entry_point: "plugin"

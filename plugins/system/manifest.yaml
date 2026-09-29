@@ -1,0 +1,8 @@
+name: "system"
+version: "1.0.0"
+description: "Hora, fecha y estado del sistema al instante (sin LLM)"
+author: "CLAUDIO"
+category: "system"
+dependencies: []
+permissions: []
+entry_point: "plugin"

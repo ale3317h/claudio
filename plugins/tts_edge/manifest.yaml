@@ -1,0 +1,8 @@
+name: "tts_edge"
+version: "1.0.0"
+description: "Texto a voz neuronal (Microsoft Edge, es-AR)"
+author: "CLAUDIO"
+category: "audio"
+dependencies: []
+permissions: ["AUDIO", "NETWORK"]
+entry_point: "plugin"

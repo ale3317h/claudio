@@ -1,0 +1,8 @@
+name: "browser"
+version: "1.0.0"
+description: "Control de Opera via Chrome DevTools Protocol: abrir, pestanas, leer"
+author: "CLAUDIO"
+category: "web"
+dependencies: []
+permissions: ["APP_LAUNCH", "NETWORK"]
+entry_point: "plugin"

@@ -1,0 +1,8 @@
+name: "whatsapp"
+version: "1.0.0"
+description: "Enviar mensajes por WhatsApp Desktop"
+author: "CLAUDIO"
+category: "communication"
+dependencies: ["pc_control"]
+permissions: ["APP_LAUNCH"]
+entry_point: "plugin"

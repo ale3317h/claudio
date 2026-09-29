@@ -1,0 +1,8 @@
+name: "web_search"
+version: "1.0.0"
+description: "Búsqueda web (Tavily, gratis 1000/mes)"
+author: "CLAUDIO"
+category: "web"
+dependencies: []
+permissions: ["NETWORK"]
+entry_point: "plugin"

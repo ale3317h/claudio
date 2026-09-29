@@ -1,0 +1,34 @@
+[tool.ruff]
+target-version = "py312"
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "TRY", "ASYNC", "S", "PLW", "DTZ"]
+ignore = [
+    "BLE001",
+    "S110",
+    "UP006",
+    "UP035",
+    "UP045",
+    "UP037",
+    "PLW1510",
+    "DTZ005",
+    "DTZ006",
+    "DTZ011",
+    "DTZ012",
+    "UP042",
+    "PLW0603",
+    "E402",
+    "S603",
+    "S606",
+    "S607",
+    "TRY300",
+    "E501",
+    "TRY003",
+    "SIM105",
+    "TRY400",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S108"]
+"scripts/*" = ["S101"]

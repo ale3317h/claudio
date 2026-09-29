@@ -1,0 +1,21 @@
+CLAUDIO - lo necesario para funcionar
+====================================
+OBLIGATORIO:
+- Windows 10/11 de 64 bits
+- Python 3.12+ (python.org, con pip)
+- Mic + parlantes/auriculares (para voz)
+- Una API key de LLM gratis: GROQ_API_KEY (console.groq.com/keys), GOOGLE_API_KEY (aistudio.google.com), u Ollama local
+OPCIONAL:
+- TAVILY_API_KEY en tavily.com (busqueda profunda; sin esto usa DuckDuckGo gratis)
+- MODEL_API_KEY en dev.meta.ai (Muse Spark, pago por uso)
+- Discord webhook/user token (musica con bot Jockie)
+- YouTube OAuth Google (tu biblioteca musical)
+- Vosk small-es (wake word, ver README)
+INSTALAR:
+  python -m venv .venv
+  .venv/Scripts/python -m pip install -r requirements.txt
+  copiar .env.example a .env y completar keys
+CORRER:
+  .venv/Scripts/python -m core.main run --text
+  .venv/Scripts/python -m core.main run --voice
+  .venv/Scripts/python -m core.main run --call
